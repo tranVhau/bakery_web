@@ -1,0 +1,142 @@
+/* mobile & table */
+@media (max-width: 1023px) {
+  .header__nav-warp-bars {
+    display: block;
+  }
+
+  .header__nav-menu {
+    display: none;
+  }
+
+  .header__navbar-icon-mobile-tablet {
+    display: block;
+    position: absolute;
+    color: var(--white-color);
+    font-size: 21px;
+    top: 50%;
+    left: 0;
+    padding: 24px;
+    margin-left: 30px;
+    transform: translateY(-50%);
+  }
+
+  .header__navbar-list {
+    display: none;
+    background-color: var(--white-color);
+    position: fixed;
+    overflow: auto;
+    max-height: 400px;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    padding: 8px 0;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+  }
+
+  /* res footer */
+  .footer-top-widget__logo a img {
+    width: 70%;
+  }
+
+  .footer-top-widget__info,
+  .footer-top-widget__social-link span,
+  .footer-widget-top-content-link,
+  .footer-widget-top-content-link {
+    font-size: 1.3rem;
+  }
+
+  .footer-top-useful {
+    padding-left: 0px;
+  }
+
+  .footer-top-help,
+  .footer-top-sub {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+
+  .footer-top-help,
+  .footer-top-useful,
+  .footer-top-sub {
+    text-align: center;
+  }
+
+  .footer-widget-top-content-list {
+    padding-left: 0px;
+  }
+}
+
+/* mobile */
+@media (max-width: 739px) {
+  .header__nav-warp-icon {
+    font-size: 1.6rem;
+  }
+
+  .mobile-header__bar {
+    justify-content: center;
+  }
+
+  .header__nav-logo {
+    justify-content: center;
+  }
+
+  .header__nav-logo a img {
+    width: 90%;
+  }
+
+  .header__bar-icon {
+    width: 20px;
+    height: 3px;
+  }
+
+  .header__bar-icon::after,
+  .header__bar-icon::before {
+    width: 25px;
+    height: 3px;
+  }
+
+  .header__nav-warp-search-form {
+    min-width: 260px;
+    top: 120%;
+  }
+
+  .header__nav-warp-content {
+    min-height: 20px;
+  }
+
+  /* footer */
+
+  .footer-top-widget__logo a img {
+    width: 60%;
+  }
+
+  .footer-top-widget {
+    margin-bottom: 0;
+  }
+
+  .footer-top-useful {
+    padding-top: 0px;
+  }
+
+  .footer-top-widget__info,
+  .footer-top-widget__social {
+    padding-left: 15px;
+  }
+
+  .footer__input-boxs form {
+    padding: 0 20px;
+  }
+}
+
+/* table */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .header__nav-logo a img {
+    width: 100%;
+  }
+
+  .header__nav-warp-icon {
+    font-size: 2.2rem;
+  }
+
+  /* footer res */
+}
