@@ -9,7 +9,7 @@ function getQuery()
     } else {
         $pages = 1;
     }
-    $row = 10;
+    $row = 12;
     $from = ($pages - 1) * $row;
 
     if (isset($_GET['id']) && $_GET['id'] != '6') {
@@ -83,20 +83,28 @@ echo getNumOfMenu();
         <!-- Phân Trang  -->
         <div class="phtr">
 
-        <a href=""><i class="fas fa-caret-left icon-phtr"></i></a>
-        <?php
-        for ($i = 1; $i <= $numOfPage; $i++) {
-        ?>
-            <nav aria-label="Page navigation">        
-                <div class="stylephtr">
-                <a class ="P" href="index.php?id=1&pages=<?php echo $i ?>"> <?php echo $i ?></a>    
-                </div>
-            </nav>
-        <?php
-        }
-        ?>
-        <a href="index.php?id=1&pages=<?php echo $i ?>"><i class="fas fa-caret-right icon-phtr"></i></a>
-        
- </div>
+            <a href=""><i class="fas fa-caret-left icon-phtr"></i></a>
+            <?php
+            for ($i = 1; $i <= $numOfPage; $i++) {
+            ?>
+                <nav aria-label="Page navigation">
+                    <?php
+                    $tempid;
+                    if (isset($_GET['id'])) {
+                        $tempid = $_GET['id'];
+                    } else {
+                        $tempid = '';
+                    }
+                    ?>
+                    <div class="stylephtr">
+                        <a href="index.php?id=<?php echo $tempid ?>&pages=<?php echo $i ?>"> <?php echo $i ?></a>
+                    </div>
+                </nav>
+            <?php
+            }
+            ?>
+            <a href="index.php?id=1&pages=<?php echo $i ?>"><i class="fas fa-caret-right icon-phtr"></i></a>
+
+        </div>
     </div>
 </div>
