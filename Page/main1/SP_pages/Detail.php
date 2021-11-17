@@ -20,9 +20,18 @@
 <body>
 
   <div class="app">
-    <!-- header -->
 
-    <!-- ====================================Product Detail================================== -->
+    <?php
+    include('../../../admin/config/config.php');
+    if (isset($_GET['idsp'])) {
+      $sql_qr = "SELECT * from sanpham, danhmuc WHERE sanpham.id_danhmuc = danhmuc.id && sanpham.id_SP ='$_GET[idsp]'";
+      $query_dt = $mysqli->query($sql_qr);
+      $rows = mysqli_fetch_array($query_dt);
+
+      $status = ($rows['soLuong_SP']) ? "Còn Hàng" : "Hết Hàng";
+    }
+
+    ?>
     <div class="card-wrapper">
       <div class="card">
         <!-- card left -->
@@ -39,19 +48,19 @@
         </div>
         <!-- card right -->
         <div class="product-content">
-          <h2 class="product-title">PanCake</h2>
-          <!-- <a href = "#" class = "product-link">visit nike store</a> -->
+          <h2 class="product-title"><?php echo $rows['ten_SP'] ?></h2>
+
           <div class="product-price">
-            <!-- <p class = "last-price">Old Price: <span>$257.00</span></p> -->
-            <p class="new-price">Giá: <span>49.000đ - 70.000đ</span></p>
+
+            <p class="new-price">Giá: <span><?php echo $rows['gia_SP'] . ' Đ' ?></span></p>
           </div>
 
           <div class="product-detail">
             <h2>Thông Tin Sản Phẩm: </h2>
             <ul>
-              <li>Mã Sản Phẩm: <span>NT16012001</span></li>
-              <li>Tình Trạng: <span>Còn hàng</span></li>
-              <li>Loại: <span>Bánh PanCake</span></li>
+              <li>Mã Sản Phẩm: <span><?php echo $rows['ma_SP'] ?></span></li>
+              <li>Tình Trạng: <span><?php echo $status ?></span></li>
+              <li>Loại: <span><?php echo $rows['ten_Danhmuc'] ?></span></li>
               <li>Phí Ship: <span>20K</span></li>
             </ul>
           </div>
@@ -59,9 +68,9 @@
           <div class="purchase-info">
             <input type="number" min="0" value="1">
             <button type="button" class="btn">
-              Giỏ Hàng <i class="fas fa-shopping-cart"></i>
+              Thêm Vào Giỏ Hàng <i class="fas fa-shopping-cart"></i>
             </button>
-            <button type="button" class="btn">Quay Lại <i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn">Mua Ngay<i class="fas fa-arrow-left"></i></button>
           </div>
         </div>
       </div>

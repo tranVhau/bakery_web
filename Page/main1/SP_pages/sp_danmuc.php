@@ -71,7 +71,7 @@ echo getNumOfMenu();
                                     <h4> <?php echo $row_sp['ten_SP'] ?> </h4> <br><br>
                                     <p class="price"><?php echo "Giá: " . $row_sp['gia_SP'] . " VND" ?> </p>
                                 </div>
-                                <p><a href=""><button><i class="style-main fas fa-shopping-cart"></i> Mua Ngay</button></a></p>
+                                <p><a href="../../../../Web_Project/Page/main1/SP_pages/Detail.php?idsp=<?php echo $row_sp['id_SP'] ?>" target="_blank"><button><i class="style-main fas fa-shopping-cart"></i> Mua Ngay</button></a></p>
                         </div>
                         </a>
                     </div>
