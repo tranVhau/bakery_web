@@ -1,0 +1,715 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:with@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --background: #f5f4f4;
+  --menu: #eed1b4;
+  --words: #8b4513;
+  --hover: #a75105;
+  --hover1: #eecfa1;
+  --black: #222;
+  --white: rgb(240, 235, 235);
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: var(--menu);
+  border-left: 10px solid var(--menu);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--background);
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--words);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--hover);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75em;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+/* vien ngoai */
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0px 10px var(--background);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--background);
+  pointer-events: none;
+}
+
+/* main */
+
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background-color: var(--background);
+  transition: 0.5s;
+}
+
+.main.active,
+.mainsub.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: var(--hover1);
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: var(--words);
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  outline: none;
+  padding: 5px 20px;
+  border: 1px solid var(--menu);
+}
+.search label ion-icon {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 1.5em;
+}
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+}
+
+/* Biểu Đồ */
+
+.cardbox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.cardbox .card {
+  position: relative;
+  background-color: var(--menu);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.cardbox .card .number {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--black);
+}
+.cardbox .card .cardname {
+  color: chocolate;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+.cardbox .card .iconbx {
+  font-size: 3.5em;
+  color: var(--words);
+}
+.cardbox .card:hover {
+  background-color: var(--hover1);
+}
+.cardbox .card:hover .number,
+.cardbox .card:hover .cardname,
+.cardbox .card:hover .iconbx {
+  color: var(--background);
+}
+
+/* Chi tiết */
+.detail {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  /* margin-top: 10px; */
+}
+.detail .recentorders {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background-color: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.cardheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cardheader h2 {
+  font-weight: 600;
+  color: var(--black);
+}
+.btn {
+  position: relative;
+  padding: 5px 10px;
+  background-color: var(--menu);
+  text-decoration: none;
+  color: var(--hover);
+  border-radius: 6px;
+}
+.detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.detail table thead {
+  text-align: left;
+}
+.detail table thead th {
+  font-weight: 600;
+  padding: 10px;
+}
+.detail table th:nth-child(2),
+.detail table th:nth-child(4) {
+  text-align: end;
+}
+
+.detail .recentorders table tr {
+  color: var(--black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.detail .recentorders table tr:last-child {
+  border-bottom: none;
+}
+.detail .recentorders table tbody tr:hover {
+  background-color: var(--hover1);
+  color: var(--hover);
+}
+.detail .recentorders table tr td {
+  padding: 10px;
+}
+.detail .recentorders table tr td:last-child {
+  text-align: end;
+}
+.detail .recentorders table tr td:nth-child(2) {
+  text-align: end;
+}
+.detail .recentorders table tr td:nth-child(3),
+.detail table th:nth-child(3) {
+  text-align: center;
+}
+
+.status.delivered {
+  padding: 2px 4px;
+  background-color: greenyellow;
+  color: var(--black);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.pending {
+  padding: 2px 4px;
+  background-color: red;
+  color: var(black);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.return {
+  padding: 2px 4px;
+  background-color: rgb(202, 202, 17);
+  color: var(--black);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.inprogress {
+  padding: 2px 4px;
+  background-color: lightblue;
+  color: var(--black);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Khách hàng */
+
+.recentcustomers {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.recentcustomers .imgbx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.recentcustomers .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recentcustomers table tr td {
+  padding: 12px 10px;
+}
+.recentcustomers table tr tb h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+.recentcustomers table tr tb h4 span {
+  font-size: 14px;
+  color: var(--black);
+}
+.recentcustomers table tr:hover {
+  background-color: var(--menu);
+  color: var(--hover);
+}
+.recentcustomers table tr:hover tb h4 span {
+  color: var(--hover);
+}
+
+/* Reponsive */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .mainsub {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .mainsub.active {
+    left: 300px;
+  }
+  .cardbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .detail {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .recentorders {
+    overflow-x: auto;
+  }
+  .status.inprogress {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .cardbox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardheader {
+    font-size: 20px;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 100;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 101;
+  }
+  .main.active .toggle {
+    color: var();
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+  .mainsub.active .toggle {
+    color: var();
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}
+
+/* ==========Thêm=========== */
+.mainsub {
+  position: relative;
+  max-width: calc(100% -300px);
+  padding: 15px;
+  margin: auto;
+}
+.mainsub .main-content {
+  position: relative;
+  background-color: var(--menu);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  min-height: 90vh;
+}
+.mainsub-header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--words);
+  margin-bottom: 5px;
+}
+.main-content table {
+  width: 100%;
+  min-height: calc(85vh - 100px);
+}
+.main-content table tr td:nth-child(1) {
+  width: 15%;
+  text-align: center;
+  font-size: 1.1em;
+}
+.main-content table tr td input {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 5px;
+  border: none;
+  text-indent: 10px;
+  letter-spacing: 0.1em;
+}
+.main-content table tr td textarea {
+  width: 100%;
+  height: 12em;
+  border-radius: 5px;
+  border: none;
+  text-indent: 10px;
+  line-height: 20px;
+}
+.main-content table tr td select {
+  width: 20%;
+  height: 2.1em;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.input {
+  position: absolute;
+  bottom: 10px;
+  padding: 1.5em;
+  left: 40%;
+}
+.input input {
+  width: 100%;
+  height: 2.4em;
+  padding: 0.5em;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1.1em;
+  border: none;
+  color: var(--hover);
+  background-color: var(--background);
+}
+
+/* ======Liệt Kê==== */
+.table-content {
+  position: relative;
+  border-radius: 20px;
+  max-width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  width: 100%;
+}
+.table-content table {
+  border-collapse: collapse;
+}
+.table-content table thead th {
+  font-size: 1.2em;
+  background-color: var(--menu);
+  padding: 10px 0;
+}
+.table-content table thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+.table-content table thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+.table-content table tr td {
+  padding: 5px;
+}
+.table-content table tr:nth-child(even) {
+  background-color: rgb(247, 238, 221);
+}
+/* .table-content table tbody tr:hover  {
+    background-color:rgb(223, 130, 9);
+    color: white;
+  } */
+.table-content table tr td:nth-child(1) {
+  width: 2%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(2) {
+  width: 8%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(4) {
+  width: 4%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(5) {
+  width: 4%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(6) {
+  width: 6%;
+  text-align: center;
+}
+.table-content table tr td:nth-child(7) {
+  width: 20%;
+}
+.table-content table tr td:nth-child(8) {
+  width: 8%;
+  text-align: center;
+}
+.edit {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 3px;
+}
+.btn-D {
+  background-color: rgb(243, 28, 28);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: bold;
+}
+.btn-edit:hover {
+  opacity: 0.9;
+}
+.btn-E {
+  padding: 10px;
+  background-color: rgb(29, 29, 248);
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* ===========xem tài khoản, xem phản hồi============ */
+
+.user-acc {
+  position: relative;
+  border-radius: 20px;
+  max-width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 20px;
+}
+.user-acc table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.user-acc table tr th {
+  background-color: var(--menu);
+  padding: 10px 0;
+}
+.user-acc table tr th:first-child {
+  border-radius: 10px 0 0 0;
+}
+.user-acc table tr th:last-child {
+  border-radius: 0 10px 0 0;
+}
+.user-acc table td {
+  padding: 10px;
+  text-align: start;
+  font-size: 1em;
+  font-weight: 500;
+}
+.user-acc table tr:nth-child(odd) td {
+  background-color: wheat;
+}
+.user-acc table tr td:nth-child(1),
+.user-acc table tr td:nth-child(4),
+.user-acc table tr td:nth-child(6),
+.user-acc table tr td:nth-child(8) {
+  text-align: center;
+}
+.edituser {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn-edituser {
+  margin: 10px 0;
+}
+.btn-edituser:hover {
+  opacity: 0.9;
+}
+.edituser a {
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+}
+.edituser .btn-D-user {
+  background-color: rgb(243, 28, 28);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: bold;
+}
+.edituser .btn-E-user {
+  background-color: rgb(29, 29, 248);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: bold;
+}
+/* ==========================footer =========================*/

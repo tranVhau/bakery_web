@@ -23,10 +23,10 @@
                             <input type="checkbox" hidden="" id="subnav-appear2" class="click-subnav">
                             <ul class="mobile-header__item-list">
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=banhkem">Bánh Kem</a>
+                                    <a href="index.php?direct=banhkem&id=2">Bánh Kem</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=banhmi">Bánh Mì</a>
+                                    <a href="index.php?direct=banhmi&id=1">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -39,13 +39,13 @@
                             <input type="checkbox" hidden="" id="subnav-appear3" class="click-subnav2">
                             <ul class="mobile-header__item-list">
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=cafe">Cafe</a>
+                                    <a href="index.php?direct=cafe&id=3">Cafe</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=cocktail">Cocktail</a>
+                                    <a href="index.php?direct=cocktail&id=5">Cocktail</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=trasua">Trà Sửa</a>
+                                    <a href="index.php?direct=trasua&id=4">Trà Sữa</a>
                                 </li>
 
                             </ul>
@@ -91,10 +91,10 @@
                             <!-- shop none -->
                             <ul class="navbar__shop">
                                 <li class="navbar__shop--item">
-                                    <a href="index.php?direct=banhkem" class="navbar__shop--link">Bánh Kem</a>
+                                    <a href="index.php?direct=banhkem&id=2" class="navbar__shop--link">Bánh Kem</a>
                                 </li>
                                 <li class="navbar__shop--item">
-                                    <a href="index.php?direct=banhmi" class="navbar__shop--link">Bánh Mì</a>
+                                    <a href="index.php?direct=banhmi&id=1" class="navbar__shop--link">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -105,17 +105,17 @@
                             </a>
                             <ul class="navbar__page">
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=cafe" class="navbar__page--link">
+                                    <a href="index.php?direct=cafe&id=3" class="navbar__page--link">
                                         Cafe
                                     </a>
                                 </li>
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=cocktail" class="navbar__page--link">
+                                    <a href="index.php?direct=cocktail&id=5" class="navbar__page--link">
                                         Cocktail
                                     </a>
                                 </li>
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=trasua" class="navbar__page--link">
+                                    <a href="index.php?direct=trasua&id=4" class="navbar__page--link">
                                         Trà Sữa
                                     </a>
                                 </li>

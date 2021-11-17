@@ -32,7 +32,7 @@ $query_cocktail = $mysqli->query($sql_cocktail);
             <div class="khu" id="khu">
                 <div class="icon-pr">
                     <a href="">
-                        <img src="../../assets/img/banner/pancake.png" alt="">
+                        <img src="../../../assets/img/banner/pancake.png" alt="">
                     </a>
                 </div>
                 <?php

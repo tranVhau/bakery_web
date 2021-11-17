@@ -2,10 +2,12 @@
 $sql_lietke_admin = "SELECT * FROM user WHERE user.level =0 ORDER BY id DESC";
 $query_lietke_admin = $mysqli->query($sql_lietke_admin);
 ?>
-
-<p>Danh Sách Tài Khoản Khách Hàng</p>
-
-<table style="width: 100%;" border="1">
+<div class="mainsub">
+    <div class="mainsub-header">
+        <h2>Danh Sách Tài Khoản Khách Hàng</h2>
+    </div>
+ <div class="user-acc">
+ <table>
     <tr>
         <th>ID</th>
         <th> Tên Đăng Nhập </th>
@@ -13,8 +15,8 @@ $query_lietke_admin = $mysqli->query($sql_lietke_admin);
         <th>Ngày Sinh</th>
         <th>Địa Chỉ </th>
         <th>Giới Tính</th>
-        <th>Số ĐT </th>
-        <th>email</th>
+        <th>Email</th>
+        <th>Số ĐT</th>
         <th>Thao Tác</th>
     </tr>
     <?php
@@ -32,13 +34,20 @@ $query_lietke_admin = $mysqli->query($sql_lietke_admin);
             <td><?php echo $row['sex'] ?></td>
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['phonenumber'] ?></td>
-            <td>
-                <a href="modules/quanlytaikhoan/xuly.php?iduser=<?php echo $row['id'] ?>">Xóa</a>
-                |
-                <a href="?action=quanlytaikhoan&query=suatk&iduser=<?php echo $row['id'] ?>"> Sửa</a>
+            <td> 
+                <div class="edituser">
+                   <div class="btn-edituser">
+                       <a class="btn-D-user" href="modules/quanlytaikhoan/xuly.php?iduser=<?php echo $row['id'] ?>">Xóa</a>
+                     </div>
+                     <div class="btn-edituser">
+                       <a class="btn-E-user"href="?action=quanlytaikhoan&query=suatk&iduser=<?php echo $row['id'] ?>"> Sửa</a>
+                     </div>
+                </div>
             </td>
         </tr>
     <?php
     }
     ?>
-</table>
+ </table>
+ </div>
+</div>

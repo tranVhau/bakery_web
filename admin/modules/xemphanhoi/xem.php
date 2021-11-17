@@ -2,10 +2,12 @@
 $sql_lietke_phanhoi = "SELECT * FROM phanhoi ORDER BY id DESC";
 $query_lietke_phanhoi = $mysqli->query($sql_lietke_phanhoi);
 ?>
-
-<p>Danh Sách Phản Hồi Khách Hàng</p>
-
-<table style="width: 100%;" border="1">
+<div class="mainsub">
+    <div class="mainsub-header">
+        <h2>Danh sách phản hồi khách hàng</h2>
+    </div>
+<div class="user-acc">
+<table>
     <tr>
         <th>Vấn Đề Phản Hồi</th>
         <th> Nội Dung Phản Hồi </th>
@@ -24,3 +26,5 @@ $query_lietke_phanhoi = $mysqli->query($sql_lietke_phanhoi);
     }
     ?>
 </table>
+</div>
+</div>

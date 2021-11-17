@@ -2,8 +2,11 @@
 $sql_sua_sp = "SELECT * FROM sanpham WHERE id_SP = $_GET[idsanpham] LIMIT 1";
 $query_sua_sp = $mysqli->query($sql_sua_sp);
 ?>
-<p>Sửa Thông Tin Sản Phẩm</p>
-
+<div class="mainsub">
+    <div class="main-content" style="min-height: 100vh;">
+        <div class="mainsub-header">
+            <h2>Sửa thông tin sản phẩm</h2>
+        </div>
 <?php
 while ($row = mysqli_fetch_array($query_sua_sp)) {
 ?>
@@ -89,11 +92,13 @@ while ($row = mysqli_fetch_array($query_sua_sp)) {
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td><input type="submit" name="sua" value="Sửa Sản Phẩm"></td>
-            </tr>
+            <div class="input">
+                <input type="submit" name="sua" value="Sửa Sản Phẩm">
+            </div>
         </form>
     <?php
 }
     ?>
     </table>
+    </div>
+</div>
