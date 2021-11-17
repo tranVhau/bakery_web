@@ -364,11 +364,10 @@
 /*============================================ SLIDER =================================*/
  /* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');  */
 #area-slider {
-  margin-top:90px;
+  margin-top:110px;
 }
 .slider-area{
   height:80vh;
-  margin-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -377,9 +376,9 @@
   margin: auto;
 }
 .c {
-  min-width: 700px;
+  min-width: 90%;
   width: 700px;
-  height: 500px;
+  height: 600px;
   border-radius: 12px;
   padding: 20px;
   padding-bottom: 40px;
@@ -498,7 +497,8 @@
 
 .card__image {      
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
 }
 
 .card__overlay {
@@ -507,7 +507,7 @@
   left: 0;
   right: 0;
   z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
+  border-radius: 0 0 calc(var(--curve) * 1px) calc(var(--curve) * 1px);    
   background-color: var(--surface-color);      
   transform: translateY(100%);
   transition: .2s ease-in-out;
@@ -527,7 +527,6 @@
   background-color: var(--surface-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
- 
 }
 
 .card__arc {
@@ -545,7 +544,7 @@
 }       
 
 .card:hover .card__header {
-  transform: translateY(0);
+  transform: translateY(0.5);
 }
 
 .card__thumb {
@@ -570,13 +569,13 @@
 
 .card__description {
   padding: 0 2em 2em;
-  margin: 0;
+  margin-top: -80px;
   font-size: 1.3em;
   color: black;
   font-family: "MockFlowFont";   
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   overflow: hidden;
 }
 
@@ -588,6 +587,7 @@
   height: 100%;
 }
 .title {
+  margin-top: 30px;
   display:block;
   text-align: center;
 }

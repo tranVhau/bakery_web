@@ -13,7 +13,7 @@ $query_nuoc = $mysqli->query($sql_nuoc);
 <div class="card-area">
     <div class="logomenu">
         <img src="./assets/img/banner/bread (1).png" alt="" class="img-responsive">
-        <a href="#">Xem Sản Phẩm</a>
+        <a href="index.php?direct=all">Xem Tất Cả</a>
     </div>
     <div class="line-shop">
         <div class="line-min"></div>
@@ -51,7 +51,7 @@ $query_nuoc = $mysqli->query($sql_nuoc);
 <div class="card-area">
     <div class="logomenu">
         <img src="./assets/img/banner/green-tea.png" alt="" class="img-responsive">
-        <a href="">Xem Sản Phẩm</a>
+        <a href="index.php?direct=all">Xem Tất Cả</a>
     </div>
     <div class="line-shop">
         <div class="line-min"></div>
@@ -59,7 +59,6 @@ $query_nuoc = $mysqli->query($sql_nuoc);
     <ul class="cards">
         <?php
         while ($row_nuoc = mysqli_fetch_array($query_nuoc)) {
-
         ?>
             <li>
                 <a href="" class="card">

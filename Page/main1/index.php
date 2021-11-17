@@ -25,7 +25,6 @@
         <?php include('../../admin/config/config.php') ?>
         <?php include('headersp.php') ?>
         <?php include('SP_pages/sp_danmuc.php') ?>
-        <!-- <?php include('../SP_pages/tatcasp.php') ?> -->
         <?php include('../contact.php') ?>
         <?php include('../footer.php') ?>
     </div>

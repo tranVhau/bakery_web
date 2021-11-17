@@ -1,19 +1,18 @@
 <?php
 $query_sp = null;
+
 function getQuery()
 {
-
     global $mysqli;
     if (isset($_GET['pages'])) {
         $pages = $_GET['pages'];
     } else {
         $pages = 1;
     }
-
     $row = 10;
     $from = ($pages - 1) * $row;
 
-    if (isset($_GET['id'])) {
+    if (isset($_GET['id']) && $_GET['id'] != '6') {
         $sql_sp = "SELECT * FROM sanpham WHERE sanpham.id_danhmuc = '$_GET[id]' ORDER BY id_SP DESC LIMIT $from,$row";
     } else {
         $sql_sp = "SELECT * FROM sanpham ORDER BY id_SP DESC LIMIT $from,$row";
@@ -27,12 +26,16 @@ function getNumOfMenu()
 {
     global $mysqli;
     $count = 10;
-    if (isset($_GET['id']) && $_GET['id'] > '0' && isset($_GET['id'])  && $_GET['id'] < '6') {
-        $sql = "SELECT * FROM sanpham WHERE id_danhmuc = '$_GET[id]'";
-        $query = $mysqli->query($sql);
-    } else {
-        $sql = "SELECT * FROM sanpham";
-        $query = $mysqli->query($sql);
+
+    if (isset($_GET['id'])) {
+        $temp = $_GET['id'];
+        if ($temp != '6') {
+            $sql = "SELECT * FROM sanpham WHERE id_danhmuc = '$_GET[id]'";
+            $query = $mysqli->query($sql);
+        } else {
+            $sql = "SELECT * FROM sanpham";
+            $query = $mysqli->query($sql);
+        }
     }
     $result = array();
     while ($rows = mysqli_fetch_assoc($query)) {
@@ -78,18 +81,22 @@ echo getNumOfMenu();
         ?>
         </div>
         <!-- Phân Trang  -->
+        <div class="phtr">
+
+        <a href=""><i class="fas fa-caret-left icon-phtr"></i></a>
         <?php
         for ($i = 1; $i <= $numOfPage; $i++) {
         ?>
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li><a href="index.php?id=1&pages=<?php echo $i ?>"> <?php echo $i ?></a></li>
-                </ul>
+            <nav aria-label="Page navigation">        
+                <div class="stylephtr">
+                <a class ="P" href="index.php?id=1&pages=<?php echo $i ?>"> <?php echo $i ?></a>    
+                </div>
             </nav>
         <?php
         }
         ?>
-
-
+        <a href="index.php?id=1&pages=<?php echo $i ?>"><i class="fas fa-caret-right icon-phtr"></i></a>
+        
+ </div>
     </div>
 </div>

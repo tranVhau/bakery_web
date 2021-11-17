@@ -11,7 +11,7 @@
                     </div>
                     <div class="info">
                         <h3>Địa Chỉ</h3>
-                        <span>161 D5, Bình Thạnh, TP.HCM </span>
+                        <span>161 D5, Q.BT, TP.HCM </span>
                     </div>
                 </div>
                 <div class="card reveal">
