@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/grid.css" />
-  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="../Web_Project/assets/css/base.css" />
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/responsive.css" />
   <!--  Bootstrap -->

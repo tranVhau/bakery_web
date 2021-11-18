@@ -10,7 +10,7 @@
                     <label for="mobile-nav-appear" class="mobile-header__list">
                         <li class="mobile-header__item">
                             <label for="subnav-appear">
-                                <a href="">Trang Chủ</a>
+                                <a href="../../Web_Project/index.php">Trang Chủ</a>
                             </label>
 
                         </li>
@@ -23,10 +23,10 @@
                             <input type="checkbox" hidden="" id="subnav-appear2" class="click-subnav">
                             <ul class="mobile-header__item-list">
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=banhkem&id=2">Bánh Kem</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=2">Bánh Kem</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=banhmi&id=1">Bánh Mì</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=21">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -39,20 +39,20 @@
                             <input type="checkbox" hidden="" id="subnav-appear3" class="click-subnav2">
                             <ul class="mobile-header__item-list">
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=cafe&id=3">Cafe</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id3">Cafe</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=cocktail&id=5">Cocktail</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=5">Cocktail</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="index.php?direct=trasua&id=4">Trà Sữa</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=4">Trà Sữa</a>
                                 </li>
 
                             </ul>
                         </li>
                         <li class="mobile-header__item">
                             <label for="subnav-appear4">
-                                <a href="index.php?direct=lienhe"> liên Hệ</a>
+                                <a href="#contact-area"> liên Hệ</a>
                             </label>
 
                         </li>
@@ -84,17 +84,17 @@
                 <nav class="header__nav-menu">
                     <ul class="header__nav-menu__list">
                         <li class="header__nav-menu-item">
-                            <a href="index.php?direct=trangchu" class="header__nav-menu--link">Trang Chủ</a>
+                            <a href="../../Web_Project/index.php" class="header__nav-menu--link">Trang Chủ</a>
                         </li>
                         <li class="header__nav-menu-item">
                             <a href="" class="header__nav-menu--link">Bánh</a>
                             <!-- shop none -->
                             <ul class="navbar__shop">
                                 <li class="navbar__shop--item">
-                                    <a href="index.php?direct=banhkem&id=2" class="navbar__shop--link">Bánh Kem</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=2" class="navbar__shop--link">Bánh Kem</a>
                                 </li>
                                 <li class="navbar__shop--item">
-                                    <a href="index.php?direct=banhmi&id=1" class="navbar__shop--link">Bánh Mì</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=1" class="navbar__shop--link">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -105,17 +105,17 @@
                             </a>
                             <ul class="navbar__page">
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=cafe&id=3" class="navbar__page--link">
+                                    <a href="../../Web_Project/Page/main1/index.php?id=3" class="navbar__page--link">
                                         Cafe
                                     </a>
                                 </li>
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=cocktail&id=5" class="navbar__page--link">
+                                    <a href="../../Web_Project/Page/main1/index.php?id=5" class="navbar__page--link">
                                         Cocktail
                                     </a>
                                 </li>
                                 <li class="navbar__page--item">
-                                    <a href="index.php?direct=trasua&id=4" class="navbar__page--link">
+                                    <a href="../../Web_Project/Page/main1/index.php?id=4" class="navbar__page--link">
                                         Trà Sữa
                                     </a>
                                 </li>
@@ -123,7 +123,7 @@
                             </ul>
                         </li>
                         <li class="header__nav-menu-item">
-                            <a href="index.php?direct=lienhe" class="header__nav-menu--link">liên hệ</a>
+                            <a href="#contact-area" class="header__nav-menu--link">liên hệ</a>
                         </li>
                         <li class="header__nav-menu-item">
                             <a href="index.php?direct=phanhoi" class="header__nav-menu--link">Phản Hồi</a>

@@ -8,11 +8,11 @@
 
   <!-- ======================Css========================= -->
 
-  <link rel="stylesheet" href="../../../assets/css/Detail.css">
+  <link rel="stylesheet" href="../../../../Web_Project/assets/css/Detail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../../../assets/css/grid.css" />
-  <link rel="stylesheet" href="../../../assets/css/base.css" />
-  <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../../../../Web_Project/assets/css/grid.css" />
+  <link rel="stylesheet" href="../../../../Web_Project/assets/css/base.css" />
+  <link rel="stylesheet" href="../../../../Web_Project/assets/css/responsive.css" />
 
   <title>Chi Tiet San Pham</title>
 </head>
@@ -22,7 +22,7 @@
   <div class="app">
 
     <?php
-    include('../../../admin/config/config.php');
+    include('../../../../Web_Project/admin/config/config.php');
     if (isset($_GET['idsp'])) {
       $sql_qr = "SELECT * from sanpham, danhmuc WHERE sanpham.id_danhmuc = danhmuc.id && sanpham.id_SP ='$_GET[idsp]'";
       $query_dt = $mysqli->query($sql_qr);
@@ -30,18 +30,16 @@
 
       $status = ($rows['soLuong_SP']) ? "Còn Hàng" : "Hết Hàng";
     }
-
+    include('../../header.php');
     ?>
+
     <div class="card-wrapper">
       <div class="card">
         <!-- card left -->
         <div class="product-imgs">
           <div class="img-display">
             <div class="img-showcase">
-              <img src="../../../assets/img/banner/milktea1.jpg" alt="shoe image">
-              <img src="../../../assets/img/banner/milktea.jpg" alt="shoe image">
-              <img src="../../../assets/img/banner/bakery1.jpg" alt="shoe image">
-              <img src="../../../assets/img/banner/pancake2.png" alt="shoe image">
+              <img src="../../../../Web_Project/admin/modules/quanlysanpham/uploads/<?php echo $rows['hinhAnh_SP'] ?>" alt="shoe image">
             </div>
           </div>
 

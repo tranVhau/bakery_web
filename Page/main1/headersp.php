@@ -10,7 +10,7 @@
                      <input type="checkbox" hidden="" id="mobile-nav-appear" class="click-header__bar-icon">
                      <label for="mobile-nav-appear" class="mobile-header__list">
                          <li class="mobile-header__item">
-                             <a href="">
+                             <a href="../../../Web_Project/index.php">
                                  <label for="subnav-appear">
                                      Trang Chủ
                                  </label>
@@ -73,7 +73,7 @@
                  <nav class="header__nav-menu">
                      <ul class="header__nav-menu__list">
                          <li class="header__nav-menu-item">
-                             <a href="" class="header__nav-menu--link">Trang Chủ</a>
+                             <a href="../../../Web_Project/index.php" class="header__nav-menu--link">Trang Chủ</a>
                          </li>
                          <li class="header__nav-menu-item">
                              <a href="" class="header__nav-menu--link">Bánh</a>

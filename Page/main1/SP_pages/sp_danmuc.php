@@ -44,7 +44,7 @@ function getNumOfMenu()
     $count = count($result);
     return $count;
 }
-$numOfPage = ceil(getNumOfMenu() / 10);
+$numOfPage = ceil(getNumOfMenu() / 12);
 echo getNumOfMenu();
 
 ?>
@@ -64,8 +64,8 @@ echo getNumOfMenu();
                 ?>
                     <div class="cardedit">
                         <div class="card">
-                            <a href="">
-                                <div class="cardsub">
+                            <a href="../../../../Web_Project/Page/main1/SP_pages/Detail.php?idsp=<?php echo $row_sp['id_SP'] ?> " target="_blank">
+                                <div class=" cardsub">
                                     <img class="img" src="../../admin/modules/quanlysanpham/uploads/<?php echo $row_sp['hinhAnh_SP'] ?>" " alt="">
                                     <div class=" cardsub-id">
                                     <h4> <?php echo $row_sp['ten_SP'] ?> </h4> <br><br>
