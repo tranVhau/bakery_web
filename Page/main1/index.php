@@ -22,11 +22,13 @@
 
 <body>
     <div class="app">
-        <?php include('../../admin/config/config.php') ?>
-        <?php include('headersp.php') ?>
-        <?php include('SP_pages/sp_danmuc.php') ?>
-        <?php include('../contact.php') ?>
-        <?php include('../footer.php') ?>
+        <?php include('../../admin/config/config.php');
+        include('../main1/headersp.php');
+        include('SP_pages/sp_danmuc.php');
+        include('../contact.php');
+        include('../footer.php');
+        ?>
+
     </div>
 </body>
 
