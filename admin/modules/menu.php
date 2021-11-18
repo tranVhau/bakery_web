@@ -53,7 +53,7 @@
         <span class="icon">
           <ion-icon name="log-out-outline"></ion-icon>
         </span>
-        <span class="title">Sign out</span>
+        <span class="title"><a href="../logout.php"> LOGOUT</a></span>
       </a>
     </li>
   </ul>

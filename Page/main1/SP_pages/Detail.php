@@ -1,3 +1,21 @@
+  <!-- đặt điều kiện đăng nhập ms vô dc chi tiết-->
+  <?php
+    // include 'login_submit.php';
+    include '../../../config.php';
+    session_start();
+        if( !isset($_SESSION['user']))
+                {
+                    // echo '<script> alert("Bạn phải đăng nhập mới vô được web"); </script>'; 
+                    echo '<script> alert("Bạn phải đăng nhập mới thêm vào được giỏ hàng"); </script>'; 
+
+                    // require_once("sp_danhmuc.php");
+                    // print_r($_SESSION);
+                    // header("location:");
+                    // require_once("../MoonBakery/index.php");
+                    // header("location:../../index.php");  
+                } 
+                 
+        ?> 
 <!DOCTYPE html>
 <html>
 
@@ -66,6 +84,7 @@
           <div class="purchase-info">
             <input type="number" min="0" value="1">
             <button type="button" class="btn">
+              <!-- <p> </p> -->
               Thêm Vào Giỏ Hàng <i class="fas fa-shopping-cart"></i>
             </button>
             <button type="button" class="btn">Mua Ngay</button>

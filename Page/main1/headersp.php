@@ -119,7 +119,7 @@
 
              <div class="col l-2 m-3 c-3">
                  <div class="header__nav-warp">
-                     <div class="header__nav-warp-search">
+                     <!-- <div class="header__nav-warp-search">
                          <a href="#" class="header__nav-warp-link">
                              <i class="header__nav-warp-icon fas fa-search"></i>
                          </a>
@@ -131,15 +131,20 @@
                                  </button>
                              </form>
                          </div>
-                     </div>
+                     </div> -->
                      <div class="header__nav-warp-login">
-                         <a href="./login.html" target="_top" class="header__nav-warp-link">
+                         <a href="../../login.php" target="_top" class="header__nav-warp-link">
                              <i class="header__nav-warp-icon far fa-user"></i>
                          </a>
                      </div>
                      <div class="header__nav-warp-login">
                          <a href="#" class="header__nav-warp-link">
                              <i class="header__nav-warp-icon fas fa-shopping-cart"></i>
+                         </a>
+                     </div>
+                     <div class="header__nav-warp-login">
+                         <a href="../../logout.php" target="_top" class="header__nav-warp-link">
+                             <i class="header__nav-warp-icon far fa-user"></i>
                          </a>
                      </div>
                  </div>

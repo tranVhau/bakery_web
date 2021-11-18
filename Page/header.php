@@ -86,7 +86,7 @@
                             <a href="../../Web_Project/index.php" class="header__nav-menu--link">Trang Chủ</a>
                         </li>
                         <li class="header__nav-menu-item">
-                            <a href="" class="header__nav-menu--link">Bánh</a>
+                            <a href="../../Web_Project/index.php#banhngot" class="header__nav-menu--link">Bánh</a>
                             <!-- shop none -->
                             <ul class="navbar__shop">
                                 <li class="navbar__shop--item">
@@ -99,7 +99,7 @@
                         </li>
 
                         <li class="header__nav-menu-item">
-                            <a href="" class="header__nav-menu--link">
+                            <a href="../../Web_Project/index.php#nuocngot" class="header__nav-menu--link">
                                 Thức Uống
                             </a>
                             <ul class="navbar__page">
@@ -122,13 +122,13 @@
                             </ul>
                         </li>
                         <li class="header__nav-menu-item">
-                            <a href="#contact-area" class="header__nav-menu--link">liên hệ</a>
+                            <a href="../../Web_Project/index.php#contact-area" class="header__nav-menu--link">liên hệ</a>
                         </li>
                         <li class="header__nav-menu-item">
                             <a href="#" class="header__nav-menu--link js-PH">Phản Hồi</a>
                         </li>
                         <li class="header__nav-menu-item">
-                            <a href="#contact-area" class="header__nav-menu--link">Thông Tin</a>
+                            <a href="../../Web_Project/index.php#contact-area" class="header__nav-menu--link">Thông Tin</a>
                         </li>
                     </ul>
                 </nav>
@@ -136,7 +136,7 @@
 
             <div class="col l-2 m-3 c-3">
                 <div class="header__nav-warp">
-                    <div class="header__nav-warp-search">
+                    <!-- <div class="header__nav-warp-search">
                         <a href="#" class="header__nav-warp-link">
                             <i class="header__nav-warp-icon fas fa-search"></i>
                         </a>
@@ -148,7 +148,7 @@
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="header__nav-warp-login">
                         <a href="#" class="header__nav-warp-link">
                             <i class="header__nav-warp-icon far fa-user"></i>
@@ -159,12 +159,18 @@
                             <i class="header__nav-warp-icon fas fa-shopping-cart"></i>
                         </a>
                     </div>
+                    <div class="header__nav-warp-login">
+                        <a href="logout.php" class="header__nav-warp-link">
+                            <i class="header__nav-warp-icon far fa-user"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
 </div>
+
 
 <div class="modal js-modal">
     <div class="modal-container js-modal-container">
@@ -176,6 +182,11 @@
         </div>
         <form action="phanhoi_submit.php" method="POST" class="FormPH">
             <div class="modal-body">
+                <label for="VD" class="modal-label">
+                    Họ và tên:
+                </label>
+                <input id="VD" type="text" name="fullname_PH" class="modal-input">
+
                 <label for="VD" class="modal-label">
                     Vấn đề phản hồi:
                 </label>
