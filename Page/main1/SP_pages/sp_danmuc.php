@@ -104,7 +104,6 @@ echo getNumOfMenu();
             }
             ?>
             <a href="index.php?id=1&pages=<?php echo $i ?>"><i class="fas fa-caret-right icon-phtr"></i></a>
-
         </div>
     </div>
 </div>

@@ -26,7 +26,7 @@
                                     <a href="../../Web_Project/Page/main1/index.php?id=2">Bánh Kem</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="../../Web_Project/Page/main1/index.php?id=21">Bánh Mì</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=1">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -58,7 +58,7 @@
                         </li>
                         <li class="mobile-header__item">
                             <label for="subnav-appear4">
-                                <a href="index.php?direct=phanhoi">Phản Hồi</a>
+                                <a href="../../Web_Project/page/main1/PhanHoi.php">Phản Hồi</a>
                             </label>
 
                         </li>
@@ -126,7 +126,7 @@
                             <a href="#contact-area" class="header__nav-menu--link">liên hệ</a>
                         </li>
                         <li class="header__nav-menu-item">
-                            <a href="index.php?direct=phanhoi" class="header__nav-menu--link">Phản Hồi</a>
+                            <a href="../../Web_Project/page/main1/PhanHoi.php" class="header__nav-menu--link">Phản Hồi</a>
                         </li>
                         <li class="header__nav-menu-item">
                             <a href="#contact-area" class="header__nav-menu--link">Thông Tin</a>

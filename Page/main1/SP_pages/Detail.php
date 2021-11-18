@@ -27,10 +27,11 @@
       $sql_qr = "SELECT * from sanpham, danhmuc WHERE sanpham.id_danhmuc = danhmuc.id && sanpham.id_SP ='$_GET[idsp]'";
       $query_dt = $mysqli->query($sql_qr);
       $rows = mysqli_fetch_array($query_dt);
-
+      function addToCart(int $idsp)
+      {
+      }
       $status = ($rows['soLuong_SP']) ? "Còn Hàng" : "Hết Hàng";
     }
-    include('../../header.php');
     ?>
 
     <div class="card-wrapper">
@@ -59,7 +60,6 @@
               <li>Mã Sản Phẩm: <span><?php echo $rows['ma_SP'] ?></span></li>
               <li>Tình Trạng: <span><?php echo $status ?></span></li>
               <li>Loại: <span><?php echo $rows['ten_Danhmuc'] ?></span></li>
-              <li>Phí Ship: <span>20K</span></li>
             </ul>
           </div>
 
@@ -68,13 +68,17 @@
             <button type="button" class="btn">
               Thêm Vào Giỏ Hàng <i class="fas fa-shopping-cart"></i>
             </button>
-            <button type="button" class="btn">Mua Ngay<i class="fas fa-arrow-left"></i></button>
+            <button type="button" class="btn">Mua Ngay</button>
+
+          </div>
+          <div class="mota">
+            <h2>Mô Tả:</h2>
+            <p><?php echo $rows['mota_SP'] ?></p>
           </div>
         </div>
       </div>
     </div>
 
-    <script language="javascript" src="../../../assets/js/Detail.js"></script>
 
 </body>
 
