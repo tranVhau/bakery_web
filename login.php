@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,15 +20,22 @@
     <h2>ĐĂNG NHẬP ĐĂNG KÝ</h2>
     </div>
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
+	<div class=" sign-container">
+		<div id="in">
+		<form action="login_submit.php" method="POST">
+			<h1>Đăng Nhập</h1>
+			<br>
+			<input type="text" placeholder="Username" name="username" />
+			<input type="password" placeholder="Password" name="password" />
+			<!-- <a href="#"> Quên Mật Khâu?</a> -->
+			<button type="submit" name="submit">Đăng Nhập</button>
+		</form>
+		</div>
+	</div>
+	<div class="sign-container">
+		<div id="up">
 		<form action="register_submit.php" method="POST">
 			<h1>Tạo Tài Khoản</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>Hoặc Tự Đăng Ký Bằng Mail</span>
 			<!-- tên đn, mk, nhập lại mk,họ và tên, ngày sinh, giới tính, email, số điện thoại,địa chỉ -->
 			<input type="text" placeholder="Tên đăng nhập" name = "username" />
 			<input type="password" placeholder="Mật khẩu" name = "password" />
@@ -41,37 +48,8 @@
 			<input type="text" placeholder="Địa chỉ" name = "address" />
 			<button type="submit" name="submit1">Đăng Ký</button>
 		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="login_submit.php" method="POST">
-			<h1>Đăng Nhập</h1>
-			<!-- <div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div> -->
-			<span>Hoặc Sử Dụng Tài Khoản Của Bạn</span>
-			<input type="text" placeholder="Username" name="username" />
-			<input type="password" placeholder="Password" name="password" />
-			<!-- <a href="#"> Quên Mật Khâu?</a> -->
-			<button type="submit" name="submit">Đăng Nhập</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Chào Mừng Trở Lại!</h1>
-				<p>Let's Go Bắt đầu Mua Bánh Thôi!!!</p>
-				<button class="ghost" id="signIn">Đăng Nhập</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Xin Chào Bạn!</h1>
-				<p>Nhập thông tin bạn vào để bắt đầu hành trình Shopping</p>
-				<button class="ghost" id="signUp">Đăng Ký</button>
-			</div>
 		</div>
 	</div>
 </div>
-<script src="./assets/js/login.js"></script>
 </body>
 </html>

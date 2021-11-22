@@ -219,13 +219,9 @@ body {
   border-radius: 0 30px 30px 0;
   border: none;
   background-color: #8b4513;
-}
-
-.btn-nav-search {
   color: white;
   font-size: 20px;
 }
-
 .header__nav-warp-cart {
   position: relative;
 }
@@ -640,6 +636,16 @@ body {
 }
 /* ===========================================End Menu Bar================================*/
 
+@media (max-width: 991px) {
+  .card-area{
+    max-width: 90%;
+  }
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* =======================================Liên Hệ============================================= */
 #contact {
   background-color: rgb(226, 216, 198);
@@ -707,6 +713,13 @@ body {
   color: #8b4513;
 }
 /* ======================================Kết Thúc liên hệ======================================= */
+@media (max-width: 991px) {
+  .content{
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* ===================================Start Footer================================================== */
 .footer_area {
@@ -817,6 +830,17 @@ body {
   font-style: italic;
 }
 /* ===================================End Footer================================================ */
+@media (max-width: 991px){
+  #footer-img img{
+    width: 80%;
+  }
+  #footer-img h2{
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+}
+
+/* ============================================Phản hồi====================================== */
 .modal {
   position: fixed;
   top: 0;

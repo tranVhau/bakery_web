@@ -52,13 +52,12 @@ echo getNumOfMenu();
     <div class="title">
         <h1>Moonbakery's menu</h1>
     </div>
-    <div id="card-area">
-
         <div id="card-area">
+            <div class="icon-pr">
+                <img src="../../assets/img/banner/bakery.png" alt="">
+                <img src="../../assets/img/banner/green-tea.png" alt="">
+            </div>
             <div class="khu" id="khu">
-                <div class="icon-pr">
-                    <img src="../../../assets/img/banner/bakery.png" alt="">
-                </div>
                 <?php
                 while ($row_sp = mysqli_fetch_array($query_sp)) {
                 ?>
@@ -75,14 +74,15 @@ echo getNumOfMenu();
                         </div>
                         </a>
                     </div>
+
             </div>
         <?php
                 }
         ?>
+
         </div>
         <!-- Phân Trang  -->
         <div class="phtr">
-
             <a href=""><i class="fas fa-caret-left icon-phtr"></i></a>
             <?php
             for ($i = 1; $i <= $numOfPage; $i++) {
@@ -97,14 +97,12 @@ echo getNumOfMenu();
                     }
                     ?>
                     <div class="stylephtr">
-                        <a href="index.php?id=<?php echo $tempid ?>&pages=<?php echo $i ?>"> <?php echo $i ?></a>
+                        <a class ="P" href="index.php?id=<?php echo $tempid ?>&pages=<?php echo $i ?>"> <?php echo $i ?></a>
                     </div>
                 </nav>
             <?php
             }
             ?>
             <a href="index.php?id=1&pages=<?php echo $i ?>"><i class="fas fa-caret-right icon-phtr"></i></a>
-
         </div>
     </div>
-</div>

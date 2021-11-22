@@ -52,19 +52,21 @@
 
                              </ul>
                          </li>
+                         <li class="mobile-header__item">
                          <a href="index.php?id=6&pages=1">
                              <label for="subnav-appear">
                                  Xem tất cả sản phẩm
                              </label>
                          </a>
+                         </li>
                      </label>
                  </div>
              </div>
 
              <div class="col l-2 m-6 c-7">
                  <div class="header__nav-logo">
-                     <a href="index.html">
-                         <img src="../assets/img/banner/logomoon.png" style="width: 140px" alt="" />
+                     <a href="../../../Web_Project/index.php">
+                         <img src="../../assets/img/banner/logomoon.png" style="width: 140px" alt="" />
                      </a>
                  </div>
              </div>
@@ -119,32 +121,25 @@
 
              <div class="col l-2 m-3 c-3">
                  <div class="header__nav-warp">
-                     <!-- <div class="header__nav-warp-search">
+                     <div class="header__nav-warp-search">
                          <a href="#" class="header__nav-warp-link">
                              <i class="header__nav-warp-icon fas fa-search"></i>
                          </a>
                          <div class="header__nav-warp-search-form">
-                             <form action="# " method="post">
-                                 <input type="text" placeholder="Tìm Kiếm ..." class="header__nav-warp-search-form--input" />
-                                 <button class="btn btn-nav-search" type="submit">
-                                     <i class="fas fa-search"></i>
-                                 </button>
+                             <form action="index.php?act=search" method="POST">
+                                 <input type="text" placeholder="Tìm Kiếm ..." class="header__nav-warp-search-form--input" name="key_word" />
+                                 <input type="submit" name="timkiem" class="btn btn-nav-search" value="Tìm">
                              </form>
                          </div>
-                     </div> -->
+                     </div>
                      <div class="header__nav-warp-login">
                          <a href="../../login.php" target="_top" class="header__nav-warp-link">
                              <i class="header__nav-warp-icon far fa-user"></i>
                          </a>
                      </div>
                      <div class="header__nav-warp-login">
-                         <a href="#" class="header__nav-warp-link">
-                             <i class="header__nav-warp-icon fas fa-shopping-cart"></i>
-                         </a>
-                     </div>
-                     <div class="header__nav-warp-login">
-                         <a href="../../logout.php" target="_top" class="header__nav-warp-link">
-                             <i class="header__nav-warp-icon far fa-user"></i>
+                         <a href="../../login.php" target="_top" class="header__nav-warp-link">
+                             <i class="header__nav-warp-icon fas fa-sign-out-alt"></i>
                          </a>
                      </div>
                  </div>

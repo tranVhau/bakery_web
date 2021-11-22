@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8" />
@@ -24,9 +24,13 @@
     <div class="app">
         <?php include('../../admin/config/config.php');
         include('../main1/headersp.php');
-        include('SP_pages/sp_danmuc.php');
+        if (isset($_GET['id'])) {
+            include('SP_pages/sp_danmuc.php');
+        } else {
+            include('SP_pages/timkiem.php');
+        }
         include('../contact.php');
-        include('../footer.php');
+        include('../main1/footer.php');
         ?>
 
     </div>

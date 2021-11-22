@@ -26,7 +26,7 @@
                                     <a href="../../Web_Project/Page/main1/index.php?id=2">Bánh Kem</a>
                                 </li>
                                 <li class="mobile-header__item-item">
-                                    <a href="../../Web_Project/Page/main1/index.php?id=21">Bánh Mì</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=1">Bánh Mì</a>
                                 </li>
                             </ul>
                         </li>
@@ -39,7 +39,7 @@
                             <input type="checkbox" hidden="" id="subnav-appear3" class="click-subnav2">
                             <ul class="mobile-header__item-list">
                                 <li class="mobile-header__item-item">
-                                    <a href="../../Web_Project/Page/main1/index.php?id3">Cafe</a>
+                                    <a href="../../Web_Project/Page/main1/index.php?id=3">Cafe</a>
                                 </li>
                                 <li class="mobile-header__item-item">
                                     <a href="../../Web_Project/Page/main1/index.php?id=5">Cocktail</a>
@@ -136,32 +136,14 @@
 
             <div class="col l-2 m-3 c-3">
                 <div class="header__nav-warp">
-                    <!-- <div class="header__nav-warp-search">
-                        <a href="#" class="header__nav-warp-link">
-                            <i class="header__nav-warp-icon fas fa-search"></i>
-                        </a>
-                        <div class="header__nav-warp-search-form">
-                            <form action="# " method="post">
-                                <input type="text" placeholder="Tìm Kiếm ..." class="header__nav-warp-search-form--input" />
-                                <button class="btn btn-nav-search" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div> -->
                     <div class="header__nav-warp-login">
-                        <a href="#" class="header__nav-warp-link">
-                            <i class="header__nav-warp-icon far fa-user"></i>
-                        </a>
-                    </div>
-                    <div class="header__nav-warp-login">
-                        <a href="#" class="header__nav-warp-link">
-                            <i class="header__nav-warp-icon fas fa-shopping-cart"></i>
+                        <a href="logout.php" class="header__nav-warp-link">
+                            <i class="header__nav-warp-icon fas fa-sign-in-alt"></i>
                         </a>
                     </div>
                     <div class="header__nav-warp-login">
                         <a href="logout.php" class="header__nav-warp-link">
-                            <i class="header__nav-warp-icon far fa-user"></i>
+                            <i class="header__nav-warp-icon fas fa-user-plus"></i>
                         </a>
                     </div>
                 </div>

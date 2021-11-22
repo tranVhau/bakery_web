@@ -22,8 +22,8 @@ if( isset($_POST['fullname_PH']) && $_POST["vande_PH"] != '' && $_POST["noidung_
 else 
 {
     echo '<script> alert("Gửi đánh giá không thành công, vui lòng nhập đủ thông tin"); </script>'; 
-    require_once("index.php");
-
+    // require_once("index.php");
+    header('location:../../index.php ');
 }
 
 ?>

@@ -1,6 +1,6 @@
 <?php
-    include 'config.php';
-    session_start();
+include 'config.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,7 @@
     include('Page/content.php');
     include('Page/contact.php');
     include('Page/footer.php');
+
     ?>
   </div>
   <script src="./assets/js/main.js"></script>

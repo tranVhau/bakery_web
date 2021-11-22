@@ -49,11 +49,11 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="../logout.php">
         <span class="icon">
           <ion-icon name="log-out-outline"></ion-icon>
         </span>
-        <span class="title"><a href="../logout.php"> LOGOUT</a></span>
+        <span class="title">LOGOUT</span>
       </a>
     </li>
   </ul>
